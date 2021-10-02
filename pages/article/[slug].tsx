@@ -28,7 +28,7 @@ import {
   FooterAuthorName,
   AuthorDetails,
   FooterAuthorEmail,
-} from "./style";
+} from "../../styles/article";
 
 const ArticlePost = ({ article, categories }) => {
   const imageUrl = getStrapiMedia(article.image);
