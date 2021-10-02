@@ -74,7 +74,7 @@ const ArticlePost = ({ article, categories }) => {
             <a
               href={`https://www.facebook.com/sharer.php?u=${link}`}
               target="_blank"
-              title="Share on Twitter"
+              rel="noreferrer"
             >
               <CgFacebook />
             </a>
@@ -83,7 +83,7 @@ const ArticlePost = ({ article, categories }) => {
             <a
               href={`https://twitter.com/intent/tweet?url=${link}&text=${article.title}`}
               target="_blank"
-              title="Share on Twitter"
+              rel="noreferrer"
             >
               <CgTwitter />
             </a>
@@ -92,7 +92,7 @@ const ArticlePost = ({ article, categories }) => {
             <a
               href={`https://api.whatsapp.com/send?text=${article.title} %0A%0A ${link}`}
               target="_blank"
-              title="Share on Twitter"
+              rel="noreferrer"
             >
               <SiWhatsapp />
             </a>
