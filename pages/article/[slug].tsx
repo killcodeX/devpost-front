@@ -1,4 +1,5 @@
 import React from "react";
+import Image from 'next/image'
 import ReactMarkdown from "react-markdown";
 import Moment from "react-moment";
 import { fetchAPI } from "../../lib/api";
@@ -49,7 +50,7 @@ const ArticlePost = ({ article, categories }) => {
           <ArticleTitle>{article.title}</ArticleTitle>
           <PostMeta>
             <AuthorWrapper>
-              <img
+              <Image
                 src={getStrapiMedia(article.author.picture)}
                 alt={article.author.name}
               />
@@ -101,7 +102,7 @@ const ArticlePost = ({ article, categories }) => {
         <ReactMarkdown children={article.content} skipHtml={true} />
         <PostFooter>
           <FooterAuthorWrapper>
-            <img
+            <Image
               src={getStrapiMedia(article.author.picture)}
               alt={article.author.name}
             />
