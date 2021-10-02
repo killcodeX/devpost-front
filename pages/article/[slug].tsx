@@ -1,5 +1,5 @@
 import React from "react";
-import Image from 'next/image'
+import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import Moment from "react-moment";
 import { fetchAPI } from "../../lib/api";
@@ -8,6 +8,7 @@ import Layout from "../../components/layout";
 import Seo from "../../components/seo";
 import { CgShare, CgFacebook, CgTwitter } from "react-icons/cg";
 import { SiWhatsapp } from "react-icons/si";
+import { useSelector } from "react-redux";
 import {
   ArticleBanner,
   ArticleImage,
@@ -39,12 +40,13 @@ const ArticlePost = ({ article, categories }) => {
     shareImage: article.image,
     article: true,
   };
+  const global = useSelector((state: any) => state.global);
   return (
     <Layout categories={categories}>
       <Seo seo={seo} global={global} />
       <ArticleBanner>
         <ArticleImage>
-          <img src={imageUrl} alt={article.title} />
+          <Image src={imageUrl} alt={article.title} />
         </ArticleImage>
         <ArticleDetails>
           <ArticleTitle>{article.title}</ArticleTitle>
@@ -99,7 +101,7 @@ const ArticlePost = ({ article, categories }) => {
             </a>
           </IconWrapper>
         </PostShare>
-        <ReactMarkdown children={article.content} skipHtml={true} />
+        <ReactMarkdown skipHtml={true}>{article.content}</ReactMarkdown>
         <PostFooter>
           <FooterAuthorWrapper>
             <Image
