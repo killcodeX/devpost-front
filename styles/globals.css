@@ -23,3 +23,17 @@ a {
   font-weight: 700;
   box-shadow: inset 0 -3px 0 0 #ffcd3f;
 }
+
+.custom-img {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+
+.unset-img {
+  width: 100%;
+}
+.unset-img > div {
+  position: unset !important;
+}

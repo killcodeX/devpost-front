@@ -38,11 +38,14 @@ export default function Navbar({ categories }) {
             <CategoriesWrapper>
               {categories.map((category) => {
                 return (
-                  <Link as={`/category/${category.slug}`} href="/category/[id]">
-                    <CategoryItem key={category.id}>
-                      {category.name}
-                    </CategoryItem>
-                  </Link>
+                  <CategoryItem key={category.id}>
+                    <Link
+                      as={`/category/${category.slug}`}
+                      href="/category/[id]"
+                    >
+                      <a style={{ color: "inherit" }}>{category.name}</a>
+                    </Link>
+                  </CategoryItem>
                 );
               })}
             </CategoriesWrapper>

@@ -24,7 +24,7 @@ export const HeadContainer = styled.div`
   align-items: center;
 `;
 
-export const LogoWrapper = styled.span`
+export const LogoWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: baseline;

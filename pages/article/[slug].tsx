@@ -31,6 +31,7 @@ import {
 } from "../../styles/article";
 
 const ArticlePost = ({ article, categories }) => {
+  console.log(article);
   const imageUrl = getStrapiMedia(article.image);
   const link: any = `${process.env.NEXT_PUBLIC_URL}/article/${article.slug}`;
 
@@ -46,8 +47,16 @@ const ArticlePost = ({ article, categories }) => {
       <Seo seo={seo} global={global} />
       <ArticleBanner>
         <ArticleImage>
-          <Image src={imageUrl} alt={article.title} />
+          <div className="unset-img">
+            <Image
+              src={imageUrl}
+              alt={article.title}
+              layout="fill"
+              className="custom-img"
+            />
+          </div>
         </ArticleImage>
+
         <ArticleDetails>
           <ArticleTitle>{article.title}</ArticleTitle>
           <PostMeta>
@@ -55,6 +64,7 @@ const ArticlePost = ({ article, categories }) => {
               <Image
                 src={getStrapiMedia(article.author.picture)}
                 alt={article.author.name}
+                layout="fill"
               />
             </AuthorWrapper>
             <AuthorBy>by</AuthorBy>
@@ -107,6 +117,7 @@ const ArticlePost = ({ article, categories }) => {
             <Image
               src={getStrapiMedia(article.author.picture)}
               alt={article.author.name}
+              layout="fill"
             />
           </FooterAuthorWrapper>
           <AuthorDetails>
