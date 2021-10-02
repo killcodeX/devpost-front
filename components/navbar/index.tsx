@@ -17,7 +17,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { getThemeChange, getSideOpen } from "../../redux/actions/actions";
 import useWindowWidth from "../../helpers/useWindowsize";
 
-export default function Navbar({ categories }) { //
+export default function Navbar({ categories }) {
+  //
   const dispatch = useDispatch();
   const theme = useSelector((state: any) => state.theme);
   //const categories = useSelector((state: any) => state.categories);
@@ -37,14 +38,11 @@ export default function Navbar({ categories }) { //
             <CategoriesWrapper>
               {categories.map((category) => {
                 return (
-                  <CategoryItem key={category.id}>
-                    <Link
-                      as={`/category/${category.slug}`}
-                      href="/category/[id]"
-                    >
-                      <a className="uk-link-reset">{category.name}</a>
-                    </Link>
-                  </CategoryItem>
+                  <Link as={`/category/${category.slug}`} href="/category/[id]">
+                    <CategoryItem key={category.id}>
+                      {category.name}
+                    </CategoryItem>
+                  </Link>
                 );
               })}
             </CategoriesWrapper>

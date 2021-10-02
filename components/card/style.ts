@@ -5,6 +5,7 @@ export const CardWrapper = styled.div`
   border-radius: 3px;
   overflow: hidden;
   border: 1px solid #eaeaea;
+  box-shadow: rgb(0 0 0 / 8%) 0px 4px 8px;
 `;
 export const CardUpper = styled.div``;
 
