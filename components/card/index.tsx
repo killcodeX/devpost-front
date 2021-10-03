@@ -17,14 +17,13 @@ import {
 } from "./style";
 
 export default function Cards({ article }) {
-  console.log(article);
   return (
     <CardWrapper>
       <CardUpper>
         {/* <ImageWrapper></ImageWrapper> */}
         <div className="unset-img">
           <Image
-            src={article.image.url} //getStrapiMedia(article.image)
+            src={getStrapiMedia(article.image)}
             alt={article.title}
             layout="fill"
             className="custom-img"
@@ -35,7 +34,7 @@ export default function Cards({ article }) {
         <ArticleDetails>
           <ArticleCategory>{article.category.name}</ArticleCategory>
           <ArticleDate>
-            <Moment format="Do/MM/YY">{article.published_at}</Moment>
+            <Moment format="DD/MM/YY">{article.published_at}</Moment>
           </ArticleDate>
           <ArticleAuthor>{article.author.name}</ArticleAuthor>
         </ArticleDetails>

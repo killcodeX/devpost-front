@@ -31,8 +31,7 @@ import {
 } from "../../styles/article";
 
 const ArticlePost = ({ article, categories }) => {
-  console.log(article);
-  const imageUrl = article.image.url //getStrapiMedia(article.image);
+  const imageUrl = getStrapiMedia(article.image);
   const link: any = `${process.env.NEXT_PUBLIC_URL}/article/${article.slug}`;
 
   const seo = {

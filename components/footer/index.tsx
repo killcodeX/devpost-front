@@ -38,7 +38,7 @@ export default function Footer(props) {
             <div className="col-md-3 col-sm-12 mt-3">
               <FooterSectionTitle>Follow Us</FooterSectionTitle>
               <FooterSocial>
-                <a href="#">
+                <a href="/">
                   <CgFacebook />
                 </a>
                 <a href="#">
