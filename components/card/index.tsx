@@ -24,7 +24,7 @@ export default function Cards({ article }) {
         {/* <ImageWrapper></ImageWrapper> */}
         <div className="unset-img">
           <Image
-            src={getStrapiMedia(article.image)}
+            src={article.image.url} //getStrapiMedia(article.image)
             alt={article.title}
             layout="fill"
             className="custom-img"
