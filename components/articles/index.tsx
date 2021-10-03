@@ -3,7 +3,7 @@ import Card from "../card";
 import { ArticleWrapper } from "./style";
 
 const Articles = ({ articles }) => {
-  const leftArticlesCount = Math.ceil(articles.length / 5);
+  const leftArticlesCount = Math.ceil(articles.length / 2);
   const leftArticles = articles.slice(0, leftArticlesCount);
   const rightArticles = articles.slice(leftArticlesCount, articles.length);
 
